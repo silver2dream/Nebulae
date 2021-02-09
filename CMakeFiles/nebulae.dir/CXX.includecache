@@ -7,8 +7,16 @@
 #IncludeRegexTransform: 
 
 /projects/nebulae/main.cpp
-stdio.h
-/projects/nebulae/stdio.h
 iostream
 -
+user.h
+/projects/nebulae/user.h
+utility.h
+/projects/nebulae/utility.h
+
+/projects/nebulae/user.h
+string
+-
+
+/projects/nebulae/utility.h
 
