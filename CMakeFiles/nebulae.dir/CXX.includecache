@@ -11,4 +11,8 @@ stdio.h
 /projects/nebulae/stdio.h
 iostream
 -
+climits
+-
+float.h
+-
 
