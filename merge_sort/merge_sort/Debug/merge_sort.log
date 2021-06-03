@@ -1,0 +1,3 @@
+﻿  merge_sort.cpp
+D:\source\repos\Nebulae\merge_sort\merge_sort\merge_sort.cpp(51,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  merge_sort.vcxproj -> D:\source\repos\Nebulae\merge_sort\Debug\merge_sort.exe
