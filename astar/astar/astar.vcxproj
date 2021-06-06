@@ -169,6 +169,10 @@
   <ItemGroup>
     <ClCompile Include="astar.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="astar.h" />
+    <ClInclude Include="Player.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
