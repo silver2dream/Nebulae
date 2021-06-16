@@ -11,9 +11,9 @@ public:
 	
 	void Push(T data);
 
-	int Pop();
+	T Pop();
 	
-	int Top();
+	T Top();
 	
 	int Size();
 
@@ -30,12 +30,7 @@ inline Stack<T>::Stack()
 template<typename T>
 inline void Stack<T>::Push(T data)
 {
-	if (count < capacity)
-	{
-		container[count] = data;
-		count++;
-	}
-	else
+	if (count == capacity)
 	{
 		capacity *= 2;
 		auto newContainer = new T[capacity];
@@ -43,14 +38,16 @@ inline void Stack<T>::Push(T data)
 		{
 			newContainer[i] = container[i];
 		}
-		delete container;
+		delete[] container;
 		container = newContainer;
-		container[count] = data;
 	}
+
+	container[count] = data;
+	count++;
 }
 
 template<typename T>
-inline int Stack<T>::Pop()
+inline T Stack<T>::Pop()
 {
 	if (IsEmpty()) return 0;
 
@@ -60,7 +57,7 @@ inline int Stack<T>::Pop()
 }
 
 template<typename T>
-inline int Stack<T>::Top()
+inline T Stack<T>::Top()
 {
 	if (IsEmpty()) return 0;
 	auto idx = count - 1;

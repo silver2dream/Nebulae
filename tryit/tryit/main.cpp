@@ -1,5 +1,7 @@
 #include <iostream>
 #include "stack.h"
+#include "dynamicstack.h"
+
 using namespace std;
 
 int main() {
@@ -22,6 +24,18 @@ int main() {
 	}
 
 	cout << "Hello World." << endl;
+
+	auto dynamic_stack = new DynamicStack<int>();
+	for (auto i = 0; i < 3; i++)
+	{
+		dynamic_stack->Push(i);
+	}
+
+	for (auto i = 0; i < 3; i++)
+	{
+		auto val = dynamic_stack->Pop();
+		cout << val << endl;
+	}
 
 	return 0;
 }
